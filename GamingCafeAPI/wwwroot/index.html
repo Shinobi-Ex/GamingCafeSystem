@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Café Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Gaming Café</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" data-section="dashboard">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-btn" data-section="stations">
+                    <i class="fas fa-desktop"></i>
+                    <span>Stations</span>
+                </button>
+                <button class="nav-btn" data-section="sessions">
+                    <i class="fas fa-users"></i>
+                    <span>Sessions</span>
+                </button>
+                <button class="nav-btn" data-section="reports">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reports</span>
+                </button>
+                <button class="nav-btn" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Gaming Café Management</h1>
+                    <p>Real-time monitoring and control system</p>
+                </div>
+                
+                <div class="header-right">
+                    <div class="header-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Active Stations</span>
+                            <span class="stat-value" id="active-stations">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Today Revenue</span>
+                            <span class="stat-value" id="today-revenue">₹0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Network Usage</span>
+                            <span class="stat-value" id="network-usage">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="btn btn--primary">
+                        <i class="fas fa-sync-alt"></i>
+                        Restart All Stations
+                    </button>
+                    <button class="btn btn--secondary">
+                        <i class="fas fa-heart-pulse"></i>
+                        System Health Check
+                    </button>
+                    <button class="btn btn--outline">
+                        <i class="fas fa-refresh"></i>
+                        Refresh Status
+                    </button>
+                </div>
+
+                <!-- Server Status -->
+                <div class="server-status">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Server Performance</h3>
+                            <span class="status-indicator online">
+                                <i class="fas fa-circle"></i>
+                                Online
+                            </span>
+                        </div>
+                        
+                        <div class="server-metrics">
+                            <div class="metric">
+                                <div class="metric-header">
+                                    <span class="metric-label">CPU Usage</span>
+                                    <span class="metric-value" id="cpu-value">0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="cpu-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric">
+                                <div class="metric-header">
+                                    <span class="metric-label">RAM Usage</span>
+                                    <span class="metric-value" id="ram-value">0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="ram-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric">
+                                <div class="metric-header">
+                                    <span class="metric-label">Disk Usage</span>
+                                    <span class="metric-value" id="disk-value">0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="disk-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="server-info">
+                            <div class="info-item">
+                                <span class="info-label">Uptime</span>
+                                <span class="info-value" id="uptime">0d 0h 0m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming Stations Grid -->
+                <div class="stations-section">
+                    <div class="section-header">
+                        <h3>Gaming Stations Status</h3>
+                        <div class="status-legend">
+                            <span class="legend-item gaming">
+                                <i class="fas fa-circle"></i>
+                                Gaming
+                            </span>
+                            <span class="legend-item online">
+                                <i class="fas fa-circle"></i>
+                                Online
+                            </span>
+                            <span class="legend-item offline">
+                                <i class="fas fa-circle"></i>
+                                Offline
+                            </span>
+                            <span class="legend-item maintenance">
+                                <i class="fas fa-circle"></i>
+                                Maintenance
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="stations-grid" id="stations-grid">
+                        <!-- Stations will be loaded here by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other Sections (Placeholder) -->
+            <section id="stations" class="section">
+                <h2>Station Management</h2>
+                <p>Individual station controls and detailed monitoring.</p>
+            </section>
+
+            <section id="sessions" class="section">
+                <h2>Session Management</h2>
+                <p>User sessions, time tracking, and billing.</p>
+            </section>
+
+            <section id="reports" class="section">
+                <h2>Reports & Analytics</h2>
+                <p>Revenue reports, usage statistics, and performance analytics.</p>
+            </section>
+
+            <section id="settings" class="section">
+                <h2>System Settings</h2>
+                <p>Configuration options and system preferences.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

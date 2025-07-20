@@ -1,0 +1,8 @@
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\GamingCafeAPI.csproj.AssemblyReference.cache
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\rpswa.dswa.cache.json
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\GamingCafeAPI.GeneratedMSBuildEditorConfig.editorconfig
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\GamingCafeAPI.AssemblyInfoInputs.cache
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\GamingCafeAPI.AssemblyInfo.cs
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\GamingCafeAPI.csproj.CoreCompileInputs.cache
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\GamingCafeAPI.MvcApplicationPartsAssemblyInfo.cs
+F:\perplexdiskless\exported\GamingCafeSystem\GamingCafeAPI\obj\Debug\net9.0\GamingCafeAPI.MvcApplicationPartsAssemblyInfo.cache

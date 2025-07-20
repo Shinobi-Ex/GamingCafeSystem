@@ -1,0 +1,6 @@
+@GamingCafeAPI_HostAddress = http://localhost:5277
+
+GET {{GamingCafeAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
